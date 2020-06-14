@@ -24,6 +24,11 @@
     "eject": "react-scripts eject",
     "commit": "npx git-cz"
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
