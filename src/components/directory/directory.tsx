@@ -8,7 +8,8 @@ interface ISection {
   title: string,
   imageUrl: string,
   id: number,
-  size: string
+  size: string,
+  linkUrl: string
 }
 
 
@@ -17,8 +18,8 @@ const Directory: React.FC = () => {
   return (
     <div className='directory-menu'>
       {
-        sectionsData.map(({id, title, imageUrl, size}) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}></MenuItem>
+        sectionsData.map(({id, ...sectionProps}) => (
+          <MenuItem key={id} {...sectionProps}></MenuItem>
         ))
       }
     </div>
